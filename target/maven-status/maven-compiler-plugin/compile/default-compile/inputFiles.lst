@@ -42,9 +42,11 @@
 /home/zrango-gonquet-astaire-nazaire/spring-project/gestimo-backend/src/main/java/com/gestimo/hibernate_sequence/HibernateSequenceRepository.java
 /home/zrango-gonquet-astaire-nazaire/spring-project/gestimo-backend/src/main/java/com/gestimo/pays/Pays.java
 /home/zrango-gonquet-astaire-nazaire/spring-project/gestimo-backend/src/main/java/com/gestimo/quittance/QuittanceRepository.java
+/home/zrango-gonquet-astaire-nazaire/spring-project/gestimo-backend/src/main/java/com/gestimo/permission/Permission.java
 /home/zrango-gonquet-astaire-nazaire/spring-project/gestimo-backend/src/main/java/com/gestimo/caissiere/CaissiereRepository.java
 /home/zrango-gonquet-astaire-nazaire/spring-project/gestimo-backend/src/main/java/com/gestimo/cloture_caisse/ClotureCaisse.java
 /home/zrango-gonquet-astaire-nazaire/spring-project/gestimo-backend/src/main/java/com/gestimo/charges/ChargesController.java
+/home/zrango-gonquet-astaire-nazaire/spring-project/gestimo-backend/src/main/java/com/gestimo/abstract_entity/AbstractEntity.java
 /home/zrango-gonquet-astaire-nazaire/spring-project/gestimo-backend/src/main/java/com/gestimo/encaissement/EncaissementRepository.java
 /home/zrango-gonquet-astaire-nazaire/spring-project/gestimo-backend/src/main/java/com/gestimo/table_encodage_portique/TableEncodagePortique.java
 /home/zrango-gonquet-astaire-nazaire/spring-project/gestimo-backend/src/main/java/com/gestimo/message_envoyer/MessageEnvoyerRepository.java

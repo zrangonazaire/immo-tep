@@ -76,6 +76,7 @@ com/gestimo/chapitre/ChapitreRepository.class
 com/gestimo/montant_loyer_bail/MontantLoyerBail.class
 com/gestimo/groupe_droit/GroupeDroit.class
 com/gestimo/token/TokenController.class
+com/gestimo/permission/Permission$PermissionBuilder.class
 com/gestimo/etablissement_utilisateur/EtablissementUtilisateur$EtablissementUtilisateurBuilder.class
 com/gestimo/montant_loyer_bail/MontantLoyerBailRepository.class
 com/gestimo/client_hotel/ClientHotelRepository.class
@@ -107,6 +108,7 @@ com/gestimo/quittance/QuittanceRepository.class
 com/gestimo/etage/EtageController.class
 com/gestimo/suivie_depense/SuivieDepenseRepository.class
 com/gestimo/etablissement/EtablissementRepository.class
+com/gestimo/abstract_entity/AbstractEntity.class
 com/gestimo/image_table/ImageTableRepository.class
 com/gestimo/utilisateur/Utilisateur$UtilisateurBuilder.class
 com/gestimo/droit_acces/DroitAccesRepository.class
@@ -205,6 +207,7 @@ com/gestimo/image_data/ImageDataRepository.class
 com/gestimo/etage/Etage.class
 com/gestimo/quartier/QuartierController.class
 com/gestimo/agence_immobiliere/AgenceImmobiliere$AgenceImmobiliereBuilder.class
+com/gestimo/permission/Permission.class
 com/gestimo/type_chambre/TypeChambre.class
 com/gestimo/file_data/FileData.class
 com/gestimo/prestation_hotel/PrestationHotelController.class

@@ -27,7 +27,6 @@ public class Utilisateur extends AbstractEntity implements UserDetails {
   @JoinColumn(name = "id_agence", referencedColumnName = "id")
   private AgenceImmobiliere id_agence;
 
-  private String authorities;
   private LocalDateTime date_de_naissance;
   private LocalDateTime date_debut_piece;
   private LocalDateTime date_fin_piece;
