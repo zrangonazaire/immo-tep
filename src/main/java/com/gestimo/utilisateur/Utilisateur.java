@@ -31,6 +31,12 @@ public class Utilisateur extends AbstractEntity implements UserDetails {
   private LocalDateTime date_debut_piece;
   private LocalDateTime date_fin_piece;
   private String email;
+  private String nomEtPrenomS
+  ;
+  private String mot_de_passe;
+  private String telephone;
+  private String piece_identite;
+ 
 
   @Override
   public String getPassword() {
