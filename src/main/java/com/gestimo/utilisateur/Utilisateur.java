@@ -7,7 +7,9 @@ import com.gestimo.role.Role;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -21,81 +23,62 @@ import org.springframework.security.core.userdetails.UserDetails;
 @AllArgsConstructor
 @Builder
 
-public class Utilisateur extends AbstractEntity implements UserDetails { 
+public class Utilisateur extends AbstractEntity implements UserDetails {
 
   @ManyToOne
   @JoinColumn(name = "id_agence", referencedColumnName = "id")
-  private AgenceImmobiliere id_agence;
+  private AgenceImmobiliere idAgence;
 
-  private LocalDateTime date_de_naissance;
-  private LocalDateTime date_debut_piece;
-  private LocalDateTime date_fin_piece;
+  private LocalDateTime dateDeNaissance;
+  private LocalDateTime dateDebutPiece;
+  private LocalDateTime dateFinPiece;
   private String email;
-  private String nomEtPrenomS
-  ;
-  private String mot_de_passe;
+  private String nomEtPrenomS;
+  private String motDePasse;
   private String telephone;
-  private String piece_identite;
- 
+  private String pieceIdentite;
+  private boolean enabled = true;
+  private boolean accountlocked = false;
 
   @Override
   public String getPassword() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException(
-      "Unimplemented method 'getPassword'"
-    );
+    return motDePasse;
   }
 
   @Override
   public String getUsername() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException(
-      "Unimplemented method 'getUsername'"
-    );
+    return telephone;
   }
 
   @Override
   public boolean isAccountNonExpired() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException(
-      "Unimplemented method 'isAccountNonExpired'"
-    );
+    return true;
   }
 
   @Override
   public boolean isAccountNonLocked() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException(
-      "Unimplemented method 'isAccountNonLocked'"
-    );
+    return !accountlocked;
   }
 
   @Override
   public boolean isCredentialsNonExpired() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException(
-      "Unimplemented method 'isCredentialsNonExpired'"
-    );
+    return true;
   }
 
   @Override
   public boolean isEnabled() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'isEnabled'");
+    return enabled;
   }
 
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException(
-      "Unimplemented method 'getAuthorities'"
-    );
+    return roles.stream()
+        .flatMap(role -> role.getPermissions().stream())
+        .collect(Collectors.toSet());
   }
-      @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-        name = "user_roles",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "role_id")
-    )
-  private Set<Role> roles;
+
+  @ManyToMany(fetch = FetchType.EAGER)
+  @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+  private Set<Role> roles = new HashSet<>();
+
 }

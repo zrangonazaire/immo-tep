@@ -26,6 +26,7 @@ com/gestimo/ville/VilleRepository.class
 com/gestimo/droit_acces/DroitAccesController.class
 com/gestimo/prestation/PrestationRepository.class
 com/gestimo/client_hotel/ClientHotelController.class
+com/gestimo/security/CustomUserDetailService.class
 com/gestimo/encaissement/Encaissement.class
 com/gestimo/facture/FactureController.class
 com/gestimo/encaissement_reservation/EncaissementReservationRepository.class
@@ -36,6 +37,7 @@ com/gestimo/table_encodage_portique/TableEncodagePortiqueRepository.class
 com/gestimo/message_envoyer/MessageEnvoyer.class
 com/gestimo/paiement/PaiementController.class
 com/gestimo/table_encodage_portique/TableEncodagePortique$TableEncodagePortiqueBuilder.class
+com/gestimo/utilisateur/UtilisateurService.class
 com/gestimo/prestation_hotel/PrestationHotel$PrestationHotelBuilder.class
 com/gestimo/client_hotel/ClientHotel$ClientHotelBuilder.class
 com/gestimo/charges/Charges.class
@@ -143,6 +145,7 @@ com/gestimo/charge_additionnelle/ChargeAdditionnelleRepository.class
 com/gestimo/detail_contrat_reservation/DetailContratReservationRepository.class
 com/gestimo/table_encodage_portique/TableEncodagePortique.class
 com/gestimo/appel_loyer/AppelLoyer$AppelLoyerBuilder.class
+com/gestimo/utilisateur/UtilisateurServiceImpl.class
 com/gestimo/message_envoyer/MessageEnvoyer$MessageEnvoyerBuilder.class
 com/gestimo/encaissement_principal/EncaissementPrincipalRepository.class
 com/gestimo/client_fidel/ClientFidelRepository.class

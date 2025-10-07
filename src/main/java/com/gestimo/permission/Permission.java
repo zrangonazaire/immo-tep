@@ -15,6 +15,7 @@ public class Permission implements GrantedAuthority {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(unique = true, nullable = false)
     private String nomPermission;
     private String descriptionPermission;
     private String module; // Exemple: Client, Commande, Employé
@@ -23,6 +24,10 @@ public class Permission implements GrantedAuthority {
     private boolean canWrite;
     private boolean canEdit;
     private boolean canDelete;
+
+    public String getNomPermission() {
+        return nomPermission;
+    }
 
     @Override
     public String getAuthority() {

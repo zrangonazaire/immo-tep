@@ -1,4 +1,5 @@
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/prix_par_categorie_chambre/PrixParCategorieChambre.java
+/home/pigier/java-project/immo-tep/src/main/java/com/gestimo/security/CustomUserDetailService.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/token/Token.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/prestation_additionnel_reservation/PrestationAdditionnelReservationController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/quittance/QuittanceController.java
@@ -60,6 +61,7 @@
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/quartier/QuartierRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/image_table/ImageTableController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/utilisateur/UtilisateurRepository.java
+/home/pigier/java-project/immo-tep/src/main/java/com/gestimo/utilisateur/UtilisateurServiceImpl.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/etablissement_utilisateur/EtablissementUtilisateurController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/commune/CommuneController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/pays/PaysController.java
@@ -103,6 +105,7 @@
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/immeuble/ImmeubleController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/charge_additionnelle/ChargeAdditionnelleRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/site/SiteController.java
+/home/pigier/java-project/immo-tep/src/main/java/com/gestimo/utilisateur/UtilisateurService.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/image_table/ImageTableRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/abstract_entity/AbstractEntity.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/charge_additionnelle/ChargeAdditionnelleController.java

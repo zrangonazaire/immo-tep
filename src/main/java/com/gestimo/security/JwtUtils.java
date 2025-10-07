@@ -4,14 +4,19 @@ import java.security.Key;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import org.aspectj.lang.Signature;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.io.Decoder;
+import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;
 import lombok.AccessLevel;
@@ -23,52 +28,39 @@ import lombok.experimental.FieldDefaults;
 @RequiredArgsConstructor
 public class JwtUtils {
     Key key;
-    @Value("${jwt.secret}")
+    @Value("${app.jwt.secret}")
     String secret;
-    @Value("${jwt.expiration-ms}")
+    @Value("${app.jwt.expirationMs}")
     long expirationMs;
 
-    @PostConstruct
-    public void init() {
-        this.key = Keys.hmacShaKeyFor(secret.getBytes());
+    Key getSigninKey() {
+        return Keys.hmacShaKeyFor(Decoders.BASE64.decode(secret));
     }
 
-    public String generateToken(String username, Collection<String> permissions) {
-
-        Date now = new Date();
-        Date exp = new Date(now.getTime() + expirationMs);
-        return Jwts.builder()
-                .setSubject(username)
-                .claim("permissions", permissions)
-                .setIssuedAt(now)
-                .setExpiration(exp)
-                .signWith(key, SignatureAlgorithm.HS512)
+    public String generateToken(UserDetails user) {
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("permissions", user.getAuthorities().stream().map(Object::toString).toList());
+        return Jwts.builder().setSubject(user.getUsername())
+                .addClaims(claims)
+                .setIssuedAt(new Date(System.currentTimeMillis()))
+                .setExpiration(new Date(System.currentTimeMillis() + expirationMs))
+                .signWith(getSigninKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
-
-    public boolean validateToken(String token) {
-        try {
-            Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
-            return true;
-        } catch (Exception e) {
-            // Log the exception or handle it as needed
-            return false;
-        }
+    public boolean validateToken(String token, UserDetails userDetails) {
+        return getUsernameFromToken(token).equals(userDetails.getUsername()) && !isTokenExpired(token);
     }
-
     public String getUsernameFromToken(String token) {
-        return Jwts.parserBuilder().setSigningKey(key).build()
+        return getClaim(token,Claims::getSubject);
+    }
+  
+    public boolean isTokenExpired(String token) {
+        Date expiration = Jwts.parserBuilder()
+                .setSigningKey(getSigninKey())
+                .build()
                 .parseClaimsJws(token)
                 .getBody()
-                .getSubject();
-    }
-
-    public List<String> getRolesFromToken(String token) {
-        var claims = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token).getBody();
-        Object permission = claims.get("permissions");
-        if (permission instanceof List<?>list) {
-            return (list).stream().map(Object::toString).toList();
+                .getExpiration();
+        return expiration.before(new Date());
+            }
         }
-        return Collections.emptyList();
-    }
-}
