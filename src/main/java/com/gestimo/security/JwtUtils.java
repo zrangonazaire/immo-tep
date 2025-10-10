@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -47,20 +48,31 @@ public class JwtUtils {
                 .signWith(getSigninKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
+
     public boolean validateToken(String token, UserDetails userDetails) {
         return getUsernameFromToken(token).equals(userDetails.getUsername()) && !isTokenExpired(token);
     }
+
     public String getUsernameFromToken(String token) {
-        return getClaim(token,Claims::getSubject);
+        return getClaim(token, Claims::getSubject);
     }
-  
-    public boolean isTokenExpired(String token) {
-        Date expiration = Jwts.parserBuilder()
+
+    private <T> T getClaim(String token, Function<Claims, T> claimsResolver) {
+        final Claims claims = Jwts.parserBuilder()
                 .setSigningKey(getSigninKey())
                 .build()
                 .parseClaimsJws(token)
-                .getBody()
-                .getExpiration();
-        return expiration.before(new Date());
-            }
-        }
+                .getBody();
+        return claimsResolver.apply(claims);
+    }
+
+    public List<String>getPermissionFromToken(String token){
+        return getClaim(token, claims->claims.get("permissions",List.class));
+    }
+    private Date getExpiration(String token){
+        return getClaim(token, Claims::getExpiration);
+    }
+    public boolean isTokenExpired(String token) {
+        return getExpiration(token).before(new Date());
+    }
+}

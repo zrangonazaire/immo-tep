@@ -45,6 +45,7 @@ com/gestimo/appel_loyer/AppelLoyerController.class
 com/gestimo/cloture_caisse/ClotureCaisse$ClotureCaisseBuilder.class
 com/gestimo/contrat_reservation/ContratReservationRepository.class
 com/gestimo/role/Role.class
+com/gestimo/auth/LoginRequest.class
 com/gestimo/prestation_additionnel_reservation/PrestationAdditionnelReservation$PrestationAdditionnelReservationBuilder.class
 com/gestimo/hibernate_sequence/HibernateSequenceRepository.class
 com/gestimo/etage/EtageRepository.class
@@ -62,8 +63,11 @@ com/gestimo/contrat_reservation/ContratReservationController.class
 com/gestimo/etablissement/Etablissement$EtablissementBuilder.class
 com/gestimo/encaissement_principal/EncaissementPrincipal.class
 com/gestimo/encaissement/EncaissementRepository.class
+com/gestimo/security/SecurityConfig.class
+com/gestimo/auth/AuthResponse.class
 com/gestimo/agence_immobiliere/AgenceImmobiliere.class
 com/gestimo/encaissement_principal/EncaissementPrincipalController.class
+com/gestimo/auth/AuthController.class
 com/gestimo/chapitre/Chapitre$ChapitreBuilder.class
 com/gestimo/reduction_tarifaire/ReductionTarifaireRepository.class
 com/gestimo/immeuble/Immeuble.class
@@ -98,6 +102,7 @@ com/gestimo/prestation_additionnel_reservation/PrestationAdditionnelReservationR
 com/gestimo/cron_mail/CronMail$CronMailBuilder.class
 com/gestimo/image_table/ImageTable$ImageTableBuilder.class
 com/gestimo/droit_acces/DroitAcces.class
+com/gestimo/security/JwtAuthenticationFilter.class
 com/gestimo/charge_additionnelle/ChargeAdditionnelleController.class
 com/gestimo/etablissement/Etablissement.class
 com/gestimo/prestation_hotel/PrestationHotel.class
@@ -118,6 +123,7 @@ com/gestimo/droit_acces/DroitAccesRepository.class
 com/gestimo/encaissement_accessoire/EncaissementAccessoire$EncaissementAccessoireBuilder.class
 com/gestimo/quittance/Quittance.class
 com/gestimo/suivie_depense/SuivieDepense$SuivieDepenseBuilder.class
+com/gestimo/auth/RegisterRequest.class
 com/gestimo/encaissement_reservation/EncaissementReservationController.class
 com/gestimo/quartier/Quartier.class
 com/gestimo/prix_par_categorie_chambre/PrixParCategorieChambre.class
@@ -130,12 +136,12 @@ com/gestimo/message_envoyer/MessageEnvoyerRepository.class
 com/gestimo/client/Client$ClientBuilder.class
 com/gestimo/services_hotel/ServicesHotel.class
 com/gestimo/groupe_droit/GroupeDroit$GroupeDroitBuilder.class
-com/gestimo/role/Role$RoleBuilder.class
 com/gestimo/file_data/FileData$FileDataBuilder.class
 com/gestimo/etage/Etage$EtageBuilder.class
 com/gestimo/immeuble/ImmeubleRepository.class
 com/gestimo/cloture_caisse/ClotureCaisse.class
 com/gestimo/quartier/Quartier$QuartierBuilder.class
+com/gestimo/auth/AuthServiceImpl.class
 com/gestimo/ville/Ville.class
 com/gestimo/cron_mail/CronMailRepository.class
 com/gestimo/image_data/ImageDataController.class
@@ -145,6 +151,7 @@ com/gestimo/charge_additionnelle/ChargeAdditionnelleRepository.class
 com/gestimo/detail_contrat_reservation/DetailContratReservationRepository.class
 com/gestimo/table_encodage_portique/TableEncodagePortique.class
 com/gestimo/appel_loyer/AppelLoyer$AppelLoyerBuilder.class
+com/gestimo/auth/AuthService.class
 com/gestimo/utilisateur/UtilisateurServiceImpl.class
 com/gestimo/message_envoyer/MessageEnvoyer$MessageEnvoyerBuilder.class
 com/gestimo/encaissement_principal/EncaissementPrincipalRepository.class
@@ -176,6 +183,7 @@ com/gestimo/agence_immobiliere/AgenceImmobiliereRepository.class
 com/gestimo/image_table/ImageTable.class
 com/gestimo/image_data/ImageData.class
 com/gestimo/appel_loyer/AppelLoyer.class
+com/gestimo/abstract_entity/AbstractEntity$AbstractEntityBuilder.class
 com/gestimo/services_hotel/ServicesHotel$ServicesHotelBuilder.class
 com/gestimo/categorie_chambre/CategorieChambre$CategorieChambreBuilder.class
 com/gestimo/commune/Commune$CommuneBuilder.class
@@ -185,6 +193,7 @@ com/gestimo/cron_mail/CronMailController.class
 com/gestimo/encaissement_accessoire/EncaissementAccessoireController.class
 com/gestimo/contrat_reservation/ContratReservation$ContratReservationBuilder.class
 com/gestimo/token/TokenRepository.class
+com/gestimo/abstract_entity/AbstractEntity$AbstractEntityBuilderImpl.class
 com/gestimo/token/Token.class
 com/gestimo/droit_acces/DroitAcces$DroitAccesBuilder.class
 com/gestimo/prix_par_categorie_chambre/PrixParCategorieChambre$PrixParCategorieChambreBuilder.class
@@ -210,7 +219,6 @@ com/gestimo/site/SiteController.class
 com/gestimo/image_data/ImageDataRepository.class
 com/gestimo/etage/Etage.class
 com/gestimo/quartier/QuartierController.class
-com/gestimo/agence_immobiliere/AgenceImmobiliere$AgenceImmobiliereBuilder.class
 com/gestimo/permission/Permission.class
 com/gestimo/type_chambre/TypeChambre.class
 com/gestimo/prestation_hotel/PrestationHotelController.class

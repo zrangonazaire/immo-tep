@@ -12,6 +12,7 @@
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/detail_contrat_reservation/DetailContratReservationRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/cron_mail/CronMailController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/type_chambre/TypeChambre.java
+/home/pigier/java-project/immo-tep/src/main/java/com/gestimo/auth/AuthService.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/ville/VilleController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/message_envoyer/MessageEnvoyerController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/encaissement_principal/EncaissementPrincipalController.java
@@ -28,6 +29,7 @@
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/prestation/PrestationRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/cloture_caisse/ClotureCaisse.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/contrat_reservation/ContratReservation.java
+/home/pigier/java-project/immo-tep/src/main/java/com/gestimo/security/SecurityConfig.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/client_hotel/ClientHotelRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/droit_acces/DroitAcces.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/etablissement/EtablissementRepository.java
@@ -35,10 +37,12 @@
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/file_data/FileDataRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/services_hotel/ServicesHotelController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/charges/ChargesController.java
+/home/pigier/java-project/immo-tep/src/main/java/com/gestimo/auth/AuthResponse.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/paiement/Paiement.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/prestation/PrestationController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/operation/OperationController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/prestation_hotel/PrestationHotel.java
+/home/pigier/java-project/immo-tep/src/main/java/com/gestimo/auth/LoginRequest.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/caissiere/CaissiereRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/prix_par_categorie_chambre/PrixParCategorieChambreController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/immeuble/ImmeubleRepository.java
@@ -101,6 +105,7 @@
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/commune/Commune.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/suivie_depense/SuivieDepenseController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/client_hotel/ClientHotel.java
+/home/pigier/java-project/immo-tep/src/main/java/com/gestimo/auth/AuthServiceImpl.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/groupe_droit/GroupeDroitRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/immeuble/ImmeubleController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/charge_additionnelle/ChargeAdditionnelleRepository.java
@@ -110,6 +115,7 @@
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/abstract_entity/AbstractEntity.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/charge_additionnelle/ChargeAdditionnelleController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/utilisateur/UtilisateurController.java
+/home/pigier/java-project/immo-tep/src/main/java/com/gestimo/auth/AuthController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/caissiere/Caissiere.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/etablissement_utilisateur/EtablissementUtilisateurRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/file_data/FileDataController.java
@@ -117,6 +123,7 @@
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/table_encodage_portique/TableEncodagePortiqueController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/encaissement_reservation/EncaissementReservationController.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/droit_acces/DroitAccesRepository.java
+/home/pigier/java-project/immo-tep/src/main/java/com/gestimo/auth/RegisterRequest.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/groupe_droit/GroupeDroit.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/prestation_additionnel_reservation/PrestationAdditionnelReservationRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/cloture_caisse/ClotureCaisseController.java
@@ -139,6 +146,7 @@
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/services_hotel/ServicesHotelRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/client/ClientRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/detail_contrat_reservation/DetailContratReservationController.java
+/home/pigier/java-project/immo-tep/src/main/java/com/gestimo/security/JwtAuthenticationFilter.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/encaissement_accessoire/EncaissementAccessoireRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/encaissement/EncaissementRepository.java
 /home/pigier/java-project/immo-tep/src/main/java/com/gestimo/client_hotel/ClientHotelController.java

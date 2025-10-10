@@ -49,7 +49,6 @@ import com.gestimo.token.Token;
 import com.gestimo.type_chambre.TypeChambre;
 import com.gestimo.ville.Ville;
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
 import java.util.List;
 import lombok.*;
 
@@ -59,7 +58,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+
 public class AgenceImmobiliere extends AbstractEntity {
 
   private String adresse_agence;

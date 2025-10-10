@@ -31,7 +31,7 @@ public class UtilisateurServiceImpl implements UserDetailsService, UtilisateurSe
                 .map(
                         SimpleGrantedAuthority::new)
                 .collect(Collectors.toSet());
-        return User.withUsername(utilisateur.getTelephone())
+        return User.withUsername(utilisateur.getUsername())
                 .password(utilisateur.getPassword())
                 .authorities(authorities).disabled(!utilisateur.isEnabled())
                 .build();

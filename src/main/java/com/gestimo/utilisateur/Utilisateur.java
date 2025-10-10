@@ -12,6 +12,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import lombok.*;
+
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -21,10 +25,18 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@EntityListeners(AuditingEntityListener.class)
 @Builder
+public class Utilisateur  implements UserDetails {
 
-public class Utilisateur extends AbstractEntity implements UserDetails {
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  @CreatedDate
+  private LocalDateTime creationDdate;
+  private Long idCreateur;
+  @LastModifiedDate
+  private LocalDateTime lastModifiedDate;
   @ManyToOne
   @JoinColumn(name = "id_agence", referencedColumnName = "id")
   private AgenceImmobiliere idAgence;
