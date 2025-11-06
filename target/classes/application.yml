@@ -1,0 +1,43 @@
+spring:
+    application:
+        name: immotep
+    datasource:
+        url: "jdbc:postgresql://localhost:5432/db_immo"
+        username: username
+        password: password
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        show-sql: true
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+    security:
+        user:
+            name: admin
+            password: admin
+
+server:
+    port: 8090
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  show-actuator: false
+  packages-to-scan: com.gestimo
+  paths-to-match:
+  - /api/**
+
+  #------------
+  # LOGGING (optionnel)
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+        security: DEBUG
+    com:
+      gestimo: DEBUG 

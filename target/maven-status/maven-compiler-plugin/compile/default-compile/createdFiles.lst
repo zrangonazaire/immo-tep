@@ -4,6 +4,7 @@ com\gestimo\caissiere\Caissiere.class
 com\gestimo\type_chambre\TypeChambre$TypeChambreBuilder.class
 com\gestimo\prix_par_categorie_chambre\PrixParCategorieChambreController.class
 com\gestimo\message_envoyer\MessageEnvoyerController.class
+com\gestimo\utilisateur\CustomerDetailService.class
 com\gestimo\droit_acces\DroitAccesRepository.class
 com\gestimo\caissiere\Caissiere$CaissiereBuilder.class
 com\gestimo\facture\Facture$FactureBuilder.class
@@ -68,6 +69,7 @@ com\gestimo\encaissement\Encaissement.class
 com\gestimo\categorie_chambre\CategorieChambreRepository.class
 com\gestimo\cron_mail\CronMailController.class
 com\gestimo\image_data\ImageData$ImageDataBuilder.class
+com\gestimo\permission\PermissionRepository.class
 com\gestimo\categorie_chambre\CategorieChambreController.class
 com\gestimo\appel_loyer\AppelLoyer$AppelLoyerBuilder.class
 com\gestimo\image_data\ImageData.class

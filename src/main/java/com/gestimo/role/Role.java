@@ -5,7 +5,6 @@ import com.gestimo.agence_immobiliere.AgenceImmobiliere;
 import com.gestimo.permission.Permission;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
 import java.util.Set;
 
 import lombok.*;
@@ -24,7 +23,7 @@ public class Role extends AbstractEntity {
   private AgenceImmobiliere id_agence;
 
   private String descriptionRole;
-  private String nomrole;
+  private String nomRole;
       @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "role_permissions",

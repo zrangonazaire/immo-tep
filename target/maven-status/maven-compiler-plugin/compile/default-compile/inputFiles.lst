@@ -115,6 +115,7 @@ C:\angular-project\immo-tep\src\main\java\com\gestimo\role\RoleController.java
 C:\angular-project\immo-tep\src\main\java\com\gestimo\ville\VilleRepository.java
 C:\angular-project\immo-tep\src\main\java\com\gestimo\token\TokenRepository.java
 C:\angular-project\immo-tep\src\main\java\com\gestimo\encaissement\EncaissementController.java
+C:\angular-project\immo-tep\src\main\java\com\gestimo\permission\PermissionRepository.java
 C:\angular-project\immo-tep\src\main\java\com\gestimo\prix_par_categorie_chambre\PrixParCategorieChambre.java
 C:\angular-project\immo-tep\src\main\java\com\gestimo\etablissement_utilisateur\EtablissementUtilisateurRepository.java
 C:\angular-project\immo-tep\src\main\java\com\gestimo\agence_immobiliere\AgenceImmobiliereRepository.java
@@ -142,6 +143,7 @@ C:\angular-project\immo-tep\src\main\java\com\gestimo\bienimmobilier\Bienimmobil
 C:\angular-project\immo-tep\src\main\java\com\gestimo\image_table\ImageTable.java
 C:\angular-project\immo-tep\src\main\java\com\gestimo\table_encodage_portique\TableEncodagePortique.java
 C:\angular-project\immo-tep\src\main\java\com\gestimo\encaissement_accessoire\EncaissementAccessoireRepository.java
+C:\angular-project\immo-tep\src\main\java\com\gestimo\utilisateur\CustomerDetailService.java
 C:\angular-project\immo-tep\src\main\java\com\gestimo\permission\Permission.java
 C:\angular-project\immo-tep\src\main\java\com\gestimo\reservation\ReservationController.java
 C:\angular-project\immo-tep\src\main\java\com\gestimo\detail_contrat_reservation\DetailContratReservationController.java
